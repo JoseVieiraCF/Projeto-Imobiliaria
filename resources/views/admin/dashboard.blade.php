@@ -1,117 +1,142 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+@extends('admin.master.master')
 
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/js/datatables/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="assets/js/datatables/css/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="assets/js/select2/css/select2.min.css">
-    <link rel="stylesheet" href="assets/css/boot.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+@section('content')
+    <div style="flex-basis: 100%;">
+        <section class="dash_content_app">
+            <header class="dash_content_app_header">
+                <h2 class="icon-tachometer">Dashboard</h2>
+            </header>
 
-    <title>UpAdmin - Site Control</title>
-</head>
-<body>
+            <div class="dash_content_app_box">
+                <section class="app_dash_home_stats">
+                    <article class="control radius">
+                        <h4 class="icon-users">Clientes</h4>
+                        <p><b>Locadores:</b> 100</p>
+                        <p><b>Locatários:</b> 100</p>
+                        <p><b>Time:</b> 3</p>
+                    </article>
 
-<div class="ajax_load">
-    <div class="ajax_load_box">
-        <div class="ajax_load_box_circle"></div>
-        <p class="ajax_load_box_title">Aguarde, carregando...</p>
-    </div>
-</div>
+                    <article class="blog radius">
+                        <h4 class="icon-home">Imóveis</h4>
+                        <p><b>Disponíveis:</b> 100</p>
+                        <p><b>Locados:</b> 100</p>
+                        <p><b>Total:</b> 200</p>
+                    </article>
 
-<div class="ajax_response"></div>
+                    <article class="users radius">
+                        <h4 class="icon-file-text">Contratos</h4>
+                        <p><b>Oficializados:</b> 455</p>
+                    </article>
+                </section>
+            </div>
+        </section>
 
-<div class="dash">
-    <aside class="dash_sidebar">
-        <article class="dash_sidebar_user">
-            <img class="dash_sidebar_user_thumb" src="assets/images/avatar.jpg" alt="" title=""/>
+        <section class="dash_content_app" style="margin-top: 40px;">
+            <header class="dash_content_app_header">
+                <h2 class="icon-tachometer">Últimos Contratos Cadastrados</h2>
+            </header>
 
-            <h1 class="dash_sidebar_user_name">
-                <a href="">Gustavo Web</a>
-            </h1>
-        </article>
+            <div class="dash_content_app_box">
+                <div class="dash_content_app_box_stage">
+                    <table id="dataTable" class="nowrap hover stripe" width="100" style="width: 100% !important;">
+                        <thead>
+                        <tr>
+                            <th>Locador</th>
+                            <th>Locatário</th>
+                            <th>Negócio</th>
+                            <th>Início</th>
+                            <th>Vigência</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="" class="text-orange">Robson V. Leite</a></td>
+                            <td><a href="" class="text-orange">Gustavo Web</a></td>
+                            <td>Locação</td>
+                            <td><?= date('d/m/Y'); ?></td>
+                            <td>12 meses</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-        <ul class="dash_sidebar_nav">
-            <li class="dash_sidebar_nav_item active">
-                <a class="icon-tachometer" href="dashboard.blade.php?app=dashboard/index">Dashboard</a>
-            </li>
-            <li class="dash_sidebar_nav_item"><a class="icon-users" href="dashboard.blade.php?app=users/index">Clientes</a>
-                <ul class="dash_sidebar_nav_submenu">
-                    <li class=""><a href="dashboard.blade.php?app=users/index">Ver Todos</a></li>
-                    <li class=""><a href="dashboard.blade.php?app=companies/index">Empresas</a></li>
-                    <li class=""><a href="dashboard.blade.php?app=users/team">Time</a></li>
-                    <li class=""><a href="dashboard.blade.php?app=users/create">Criar Novo</a></li>
-                </ul>
-            </li>
-            <li class="dash_sidebar_nav_item"><a class="icon-home" href="dashboard.blade.php?app=properties/index">Imóveis</a>
-                <ul class="dash_sidebar_nav_submenu">
-                    <li class=""><a href="dashboard.blade.php?app=properties/index">Ver Todos</a></li>
-                    <li class=""><a href="dashboard.blade.php?app=properties/create">Criar Novo</a></li>
-                </ul>
-            </li>
-            <li class="dash_sidebar_nav_item"><a class="icon-file-text" href="dashboard.blade.php?app=contracts/index">Contratos</a>
-                <ul class="dash_sidebar_nav_submenu">
-                    <li class=""><a href="dashboard.blade.php?app=contracts/index">Ver Todos</a></li>
-                    <li class=""><a href="dashboard.blade.php?app=contracts/create">Criar Novo</a></li>
-                </ul>
-            </li>
-            <li class="dash_sidebar_nav_item"><a class="icon-reply" href="">Ver Site</a></li>
-            <li class="dash_sidebar_nav_item"><a class="icon-sign-out on_mobile" href="" target="_blank">Sair</a></li>
-        </ul>
+        <section class="dash_content_app" style="margin-top: 40px;">
+            <header class="dash_content_app_header">
+                <h2 class="icon-tachometer">Últimos Imóveis Cadastrados</h2>
+            </header>
 
-    </aside>
+            <div class="dash_content_app_box">
+                <div class="dash_content_app_box_stage">
+                    <div class="realty_list">
+                        <div class="realty_list_item mt-1 mb-1">
+                            <div class="realty_list_item_actions_stats">
+                                <img src="{{url(asset('backend/assets/images/realty.jpeg'))}}" alt="">
+                                <ul>
+                                    <li>Venda: R$ 1.000,00</li>
+                                    <li>Aluguel: R$ 1.000,00</li>
+                                </ul>
+                            </div>
 
-    <section class="dash_content">
+                            <div class="realty_list_item_content">
+                                <h4>#1 Casa Residencial - Campeche</h4>
 
-        <div class="dash_userbar">
-            <div class="dash_userbar_box">
-                <div class="dash_userbar_box_content">
-                    <span class="icon-align-justify icon-notext mobile_menu transition btn btn-green"></span>
-                    <h1 class="transition">
-                        <i class="icon-imob text-orange"></i><a href="">Up<b>Admin</b></a>
-                    </h1>
-                    <div class="dash_userbar_box_bar no_mobile">
-                        <a class="text-red icon-sign-out" href="">Sair</a>
+                                <div class="realty_list_item_card">
+                                    <div class="realty_list_item_card_image">
+                                        <span class="icon-realty-location"></span>
+                                    </div>
+                                    <div class="realty_list_item_card_content">
+                                        <span class="realty_list_item_description_title">Bairro:</span>
+                                        <span class="realty_list_item_description_content">Campeche</span>
+                                    </div>
+                                </div>
+
+                                <div class="realty_list_item_card">
+                                    <div class="realty_list_item_card_image">
+                                        <span class="icon-realty-util-area"></span>
+                                    </div>
+                                    <div class="realty_list_item_card_content">
+                                        <span class="realty_list_item_description_title">Área Útil:</span>
+                                        <span class="realty_list_item_description_content">300 m&sup2;</span>
+                                    </div>
+                                </div>
+
+                                <div class="realty_list_item_card">
+                                    <div class="realty_list_item_card_image">
+                                        <span class="icon-realty-bed"></span>
+                                    </div>
+                                    <div class="realty_list_item_card_content">
+                                        <span class="realty_list_item_description_title">Domitórios:</span>
+                                        <span class="realty_list_item_description_content">2 Quartos<br><span>Sendo 1 suítes</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="realty_list_item_card">
+                                    <div class="realty_list_item_card_image">
+                                        <span class="icon-realty-garage"></span>
+                                    </div>
+                                    <div class="realty_list_item_card_content">
+                                        <span class="realty_list_item_description_title">Garagem:</span>
+                                        <span class="realty_list_item_description_content">2 Vagas<br><span>Sendo 1 cobertas</span></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="realty_list_item_actions">
+                                <ul>
+                                    <li class="icon-eye">1234 Visualizações</li>
+                                </ul>
+                                <div>
+                                    <a href="" class="btn btn-blue icon-eye">Visualizar Imóvel</a>
+                                    <a href="" class="btn btn-green icon-pencil-square-o">Editar Imóvel</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="dash_content_box">
-            <?php
-            $getApp = filter_input(INPUT_GET, "app", FILTER_SANITIZE_STRIPPED);
-            if (!$getApp) {
-                require __DIR__ . "/dashboard/index.php";
-            } elseif (file_exists(__DIR__ . "/{$getApp}.php")) {
-                require __DIR__ . "/{$getApp}.php";
-            } else {
-                echo "
-                    <div class='not_found'>
-                        <p class='not_found_icon icon-link-broken icon-notext'></p>
-                        <h4>Oops, não foi encontrado!</h4>
-                        <p>Você tentou acessar uma APP ou Widget que não existe ou não está disponível. Favor use o menu para navegar no sistema</p>
-                    </div>
-                ";
-            }
-            ?>
-        </div>
-    </section>
-</div>
-
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/tinymce/tinymce.min.js"></script>
-<script src="assets/js/datatables/js/jquery.dataTables.min.js"></script>
-<script src="assets/js/datatables/js/dataTables.responsive.min.js"></script>
-<script src="assets/js/select2/js/select2.min.js"></script>
-<script src="assets/js/select2/js/i18n/pt-BR.js"></script>
-<script src="assets/js/jquery.form.js"></script>
-<script src="assets/js/jquery.mask.js"></script>
-<script src="assets/js/scripts.js"></script>
-
-</body>
-</html>
+        </section>
+    </div>
+@endsection
