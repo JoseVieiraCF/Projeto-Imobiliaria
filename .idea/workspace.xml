@@ -19,15 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="mix">
-      <change afterPath="$PROJECT_DIR$/app/Support/Message.php" afterDir="false" />
+    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="Ajax login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backend/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backend/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -160,6 +155,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -184,7 +180,9 @@
       <workItem from="1604943593822" duration="803000" />
       <workItem from="1604944406826" duration="804000" />
       <workItem from="1604949296110" duration="7458000" />
-      <workItem from="1604969293456" duration="4479000" />
+      <workItem from="1604969293456" duration="4603000" />
+      <workItem from="1605030860621" duration="1825000" />
+      <workItem from="1605040899273" duration="577000" />
     </task>
     <task id="LOCAL-00001" summary="Login page">
       <created>1604955330792</created>
@@ -207,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604958460386</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajax login">
+      <created>1604973888755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604973888755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +234,8 @@
     <MESSAGE value="Login page" />
     <MESSAGE value="Master and dashboard page" />
     <MESSAGE value="mix" />
-    <option name="LAST_COMMIT_MESSAGE" value="mix" />
+    <MESSAGE value="Ajax login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajax login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1604950822253">
@@ -244,6 +250,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="517" y="307" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1604955523865" />
+    <state x="184" y="29" key="SettingsEditor" timestamp="1605030897840">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1605030897840" />
     <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1604958487315">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
