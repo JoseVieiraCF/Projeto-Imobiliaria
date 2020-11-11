@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="{{url(mix('backend/assets/css/libs.css'))}}">
     <link rel="stylesheet" href="{{url(mix('backend/assets/css/boot.css'))}}"/>
     <link rel="stylesheet" href="{{url(mix('backend/assets/css/style.css'))}}"/>
+    @hasSection('css')
+        @yield('css')
+    @endif
+
     <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 
     <title>UpAdmin - Site Control</title>
@@ -27,7 +31,8 @@
 <div class="dash">
     <aside class="dash_sidebar">
         <article class="dash_sidebar_user">
-            <img class="dash_sidebar_user_thumb" src="{{url(asset('backend/assets/images/avatar.jpg'))}}" alt="" title=""/>
+            <img class="dash_sidebar_user_thumb" src="{{url(asset('backend/assets/images/avatar.jpg'))}}" alt=""
+                 title=""/>
 
             <h1 class="dash_sidebar_user_name">
                 <a href="">Gustavo Web</a>
@@ -35,10 +40,11 @@
         </article>
 
         <ul class="dash_sidebar_nav">
-            <li class="dash_sidebar_nav_item active">
-                <a class="icon-tachometer" href="dashboard.blade.php?app=dashboard/index">Dashboard</a>
+            <li class="dash_sidebar_nav_item {{isActive('admin.home')}}">
+                <a class="icon-tachometer" href="{{route('admin.home')}}">Dashboard</a>
             </li>
-            <li class="dash_sidebar_nav_item"><a class="icon-users" href="dashboard.blade.php?app=users/index">Clientes</a>
+            <li class="dash_sidebar_nav_item"><a class="icon-users"
+                                                 href="dashboard.blade.php?app=users/index">Clientes</a>
                 <ul class="dash_sidebar_nav_submenu">
                     <li class=""><a href="dashboard.blade.php?app=users/index">Ver Todos</a></li>
                     <li class=""><a href="dashboard.blade.php?app=companies/index">Empresas</a></li>
@@ -59,7 +65,8 @@
                 </ul>
             </li>
             <li class="dash_sidebar_nav_item"><a class="icon-reply" href="">Ver Site</a></li>
-            <li class="dash_sidebar_nav_item"><a class="icon-sign-out on_mobile" href="{{route('admin.logout')}}" target="_blank">Sair</a></li>
+            <li class="dash_sidebar_nav_item"><a class="icon-sign-out on_mobile" href="{{route('admin.logout')}}"
+                                                 target="_blank">Sair</a></li>
         </ul>
 
     </aside>
@@ -90,6 +97,10 @@
 <script src="{{url(mix('backend/assets/js/jquery.js'))}}"></script>
 <script src="{{url(mix('backend/assets/js/libs.js'))}}"></script>
 <script src="{{url(mix('backend/assets/js/scripts.js'))}}"></script>
+
+@hasSection('js')
+    @yield('js')
+@endif
 
 </body>
 </html>

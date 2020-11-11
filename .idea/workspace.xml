@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="Ajax login">
+    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="Protecting routes">
+      <change afterPath="$PROJECT_DIR$/app/Helpers/isActive.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_181042_alter_users_table_add_control_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -182,7 +186,8 @@
       <workItem from="1604949296110" duration="7458000" />
       <workItem from="1604969293456" duration="4603000" />
       <workItem from="1605030860621" duration="1825000" />
-      <workItem from="1605040899273" duration="577000" />
+      <workItem from="1605040899273" duration="2979000" />
+      <workItem from="1605128548919" duration="542000" />
     </task>
     <task id="LOCAL-00001" summary="Login page">
       <created>1604955330792</created>
@@ -212,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604973888755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Protecting routes">
+      <created>1605041567218</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605041567218</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,17 +247,18 @@
     <MESSAGE value="Master and dashboard page" />
     <MESSAGE value="mix" />
     <MESSAGE value="Ajax login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajax login" />
+    <MESSAGE value="Protecting routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Protecting routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1604950822253">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1604950822253" />
-    <state x="489" y="107" key="NewPhpClassDialog" timestamp="1604971536397">
+    <state x="489" y="107" key="NewPhpClassDialog" timestamp="1605041631807">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="489" y="107" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1604971536397" />
+    <state x="489" y="107" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1605041631807" />
     <state x="517" y="307" key="NewPhpFileDialog" timestamp="1604955523865">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -254,9 +267,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1605030897840" />
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1604958487315">
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1605128580146">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1604958487315" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1605128580146" />
   </component>
 </project>

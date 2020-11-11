@@ -11,6 +11,10 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
+        if (Auth::check())
+        {
+            return redirect()->route('admin.home');
+        }
         return view('admin.index');
     }
 
@@ -21,6 +25,8 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+
+
         $credentials = [
             'email' => $request->email,
             'password' => $request->password,
@@ -43,6 +49,8 @@ class AuthController extends Controller
             $json['message'] =  $this->message->error("Oops, Usuário e Senha não conferem")->render();
             return response()->json($json);
         }
+
+        $this->authenticate($request->getClientIp());
         $json['redirect'] = route('admin.home');
         return response()->json($json);
 
@@ -52,5 +60,13 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect()->route('admin.login');
+    }
+
+    private function authenticate($ip){
+        $user = User::where('id',Auth::user()->id);
+        $user->update([
+            'last_login_at' => date('Y-m-d H:i:s'),
+            'last_login_ip' => $ip,
+        ]);
     }
 }
