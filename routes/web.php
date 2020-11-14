@@ -18,7 +18,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as'=> 'admin.'],func
 
     Route::group(['middleware'=>['auth']], function (){
         Route::get('home','AuthController@home')->name('home');
-        Route::resource('users','UserController')->name ('users');
+        Route::resource('users','UserController');
     });
 
     Route::get('logout','AuthController@logout')->name('logout');
