@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -82,4 +83,11 @@ class UserController extends Controller
     {
         //
     }
+
+    public function team()
+    {
+        return view('admin.users.team');
+    }
+
+
 }
