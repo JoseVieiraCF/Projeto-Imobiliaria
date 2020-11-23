@@ -20,6 +20,11 @@
 
     <div class="dash_content_app_box">
         <div class="nav">
+            @if($errors->all())
+                @foreach($errors->all() as $error)
+                    <p class="icon-asterisk">{{$error}}</p>
+                @endforeach
+            @endif
             <ul class="nav_tabs">
                 <li class="nav_tabs_item">
                     <a href="#data" class="nav_tabs_item_link active">Dados Cadastrais</a>
@@ -35,7 +40,8 @@
                 </li>
             </ul>
 
-            <form class="app_form" action="" method="post" enctype="multipart/form-data">
+            <form class="app_form" action="{{route('admin.users.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="nav_tabs_content">
                     <div id="data">
                         <div class="label_gc">

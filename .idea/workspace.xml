@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="fixes">
+    <list default="true" id="b802ad32-5ab5-4643-abea-3a699b484110" name="Default Changelist" comment="Client Views">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/team.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +185,8 @@
       <workItem from="1605128548919" duration="1191000" />
       <workItem from="1605313600660" duration="1529000" />
       <workItem from="1605563314613" duration="2341000" />
-      <workItem from="1605906304079" duration="2283000" />
+      <workItem from="1605906304079" duration="4920000" />
+      <workItem from="1606173056669" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="Login page">
       <created>1604955330792</created>
@@ -246,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605564675768</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Client Views">
+      <created>1605908793497</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605908793497</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +278,8 @@
     <MESSAGE value="Users" />
     <MESSAGE value="Users route" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="Client Views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Client Views" />
   </component>
   <component name="WindowStateProjectService">
     <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1604950822253">
@@ -292,9 +298,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1605030897840" />
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1605313933180">
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1606173210097">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1605313933180" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1606173210097" />
   </component>
 </project>
